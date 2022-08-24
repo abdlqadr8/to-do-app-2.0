@@ -1,56 +1,52 @@
-  //Add To-do Pop-up window
-  const addBtn = document.querySelector('.add-btn');
-  const closeBtn = document.querySelector('.close-btn');
-  const wrap = document.querySelector('.wrapper');
+const addTodo = document.querySelector('.add');
+const list = document.querySelector('.todos');
+const del = document.querySelector('.del');
 
-  addBtn.addEventListener('click', () => {
-      wrap.style.display = 'block';
-  });
+const generateTodo = thread => {
+    const html = ` 
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>${thread}</span>
+            <span>
+                <i class="fa-solid fa-pen-to-square edit"></i> <i class="fa-solid fa-trash-can delete" data-bs-toggle="modal" data-bs-target="#mymodal"></i>
+            </span>
+        </li>
+    `;
 
-  closeBtn.addEventListener('click', () => {
-      wrap.style.display = 'none';
-  });
+    list.innerHTML += html;
+};
 
-  const addForm = document.querySelector('.add-form');
-  const ul = document.querySelector('ul');
+//Add to do
+addTodo.addEventListener('submit', e => {
+    e.preventDefault();
+    const thread = e.target.add.value.trim();
 
-  addForm.addEventListener('submit', e => {
-      e.preventDefault()
+    if (thread.length) {
+        generateTodo(thread);
+        addTodo.reset();
+    }
+});
 
-      const value = addForm.todo.value;
-
-      const li = document.createElement('li');
-      li.textContent = value;
-      ul.append(li);
-
-      wrap.style.display = 'none';
-
-  });
-
-  //Edit/Delete option
-  const option = document.querySelector('.option');
-  const optCloseBtn = document.querySelector('.opt-close');
-  const optForm = document.querySelector('.opt-form');
-  const list = document.querySelectorAll('li');
-  
-  ul.addEventListener('click', e => {
-
-      let prevValue = e.target.innerText;
-      optForm.edit.setAttribute('value', prevValue)
-
-      if (e.target.tagName === 'LI') {
-          option.style.display = 'block';
-
-          optForm.addEventListener('submit', e => {
-              e.preventDefault();
-              const newValue = optForm.edit.value;
-              console.log(newValue)
+//Delete To do
+list.addEventListener('click', e => {
+    if (e.target.classList.contains('delete')) {
+        del.addEventListener('click', () => {
+            e.target.closest('li').remove();
+        }); 
+    }
+});
 
 
-          });
-      }
-  });
+// list.addEventListener('click', e => {
+//     if (e.target.classList.contains('edit')) {
+//         let text = e.target.closest('li').innerText;
+//         editTodo.new.setAttribute('value', text);
 
-  optCloseBtn.addEventListener('click', () => {
-      option.style.display = 'none';
-  });
+//         editTodo.addEventListener('submit', e =>{
+//             e.preventDefault();
+//             console.log("yes")
+//             editTodo.reset();
+            
+//         });
+//     }
+
+// });
