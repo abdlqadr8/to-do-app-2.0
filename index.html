@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>To do App</h2>
+    <p>Tab the Button to add a list</p>
+    <ul>
+        <li>Assigment</li>
+        <li>Eat</li>
+        <li>Drink</li>
+    </ul>
+    <button class="add-btn">Add a To do</button>
+
+    <div class="wrapper">
+        <div class="popup">
+            <div class="close-btn">X</div>
+            <div class="content">
+                <p>Add something to do..</p>
+                <form action="" class="add-form">
+                    <input type="text" name="todo" placeholder="to do in here...">
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="option wrapper">
+        <div class="opt-popup popup">
+            <div class="opt-close close-btn">X</div>
+            <div class="opt-content content">
+                <p>Edit to do..</p>
+                <form action="" class="opt-form">
+                    <input type="text" name="edit" placeholder="Edit..">
+                    <input type="submit" value="Edit">
+                    <button class="del-btn">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

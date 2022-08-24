@@ -1,0 +1,148 @@
+body {
+    background: #eee;
+    margin: auto 20px;
+    font-size: 20px;
+}
+
+li {
+    display: block;
+    background-color: #DDD7D7;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 20%;
+    border-radius: 5px;
+}
+
+li:hover {
+    background-color: #c7c7c7;
+    cursor: pointer;
+}
+
+button {
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: rgb(59, 133, 231);
+    border: 2px solid rgb(59, 133, 231);
+}
+
+button:hover {
+    color: rgb(59, 133, 231);
+    background: white;
+    border: 2px solid rgb(59, 133, 231);
+
+}
+
+.del-btn {
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #f44336;
+    border: 2px solid #f44336;
+}
+
+.del-btn:hover {
+    color: #f44336;
+    background: white;
+    border: 2px solid #f44336;
+
+}
+
+.wrapper {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.option {
+    display: none;
+}
+
+.popup {
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 10% auto;
+    padding: 20px;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+}
+
+.close-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.close-btn:hover {
+    border-radius: 100px;
+    background: #f44336;
+    color: white;
+}
+
+form {
+    background-color: #ffffff;
+    border: 1px solid #DDD7D7;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    display: inline-block;
+}
+
+input {
+    border-radius: 5px;
+    background-color: rgba(196, 196, 196, 0.1);
+    padding: 15px;
+}
+
+input[type=submit] {
+    background: #0abe4f;
+    border: 2px solid #0abe4f;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    color: #0abe4f;
+    background: white;
+    border: 2px solid #0abe4f;
+}
+
+input[type=button] {
+    background: #0abe4f;
+    border: 2px solid #0abe4f;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    color: #0abe4f;
+    background: white;
+    border: 2px solid #0abe4f;
+}
